@@ -1,8 +1,9 @@
 {
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": ["packages/*"],
+    "nohoist": ["@umijs/babel-preset-umi/@babel/runtime"]
+  },
   "scripts": {
     "bootstrap": "node ./scripts/bootstrap.js",
     "build": "father-build",
