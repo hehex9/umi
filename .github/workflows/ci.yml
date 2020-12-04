@@ -35,10 +35,33 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: yarn --ignore-engines
       - run: yarn build
-      - run: yarn test --forceExit
+      - run: yarn test preset-built-in --forceExit
         env:
           CI: true
           HEADLESS: false
           PROGRESS: none
           NODE_ENV: test
-
+      - run: yarn test preset-built-in --forceExit
+        env:
+          CI: true
+          HEADLESS: false
+          PROGRESS: none
+          NODE_ENV: test
+      - run: yarn test preset-built-in --forceExit
+        env:
+          CI: true
+          HEADLESS: false
+          PROGRESS: none
+          NODE_ENV: test
+      - run: yarn test preset-built-in --forceExit
+        env:
+          CI: true
+          HEADLESS: false
+          PROGRESS: none
+          NODE_ENV: test
+      - run: yarn test preset-built-in --forceExit
+        env:
+          CI: true
+          HEADLESS: false
+          PROGRESS: none
+          NODE_ENV: test
